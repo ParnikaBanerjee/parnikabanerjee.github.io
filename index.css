@@ -1,0 +1,42 @@
+.marcellus-regular {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+:root{
+    --offwhite: #f7e1bc;
+    --darkred:#b6000f;
+    --lightblue:#a7d0d6;
+    --darkblue:#36436f;
+    --lightblack:#24282b;
+}
+body{
+    font-family: "Marcellus","serif";
+}
+.Landing{
+    background-color: #b6000f;
+    height:100vh;
+    width:100%;
+}
+.intro{
+    display:flex;
+    padding:50px;
+    margin:0vh;
+    flex-direction: column;
+}
+.hi{
+    display:flex;
+    justify-content: flex-start;
+    font-size: 100px;
+}
+.iam{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+}
+.name{
+    display:flex;
+    justify-content: flex-end;
+    font-size: 100px;
+}
