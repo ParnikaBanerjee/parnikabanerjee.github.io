@@ -20,6 +20,7 @@ body{
     font-family: "Marcellus","serif";
     background-color:var(--tango);
     overflow-x:auto;
+    margin:0%;
 }
 /* Styles for small screens */
 body {
@@ -183,12 +184,16 @@ a{
   box-shadow: 5px 10px var(--lightblack);
   animation: bounce 2s infinite ease-in-out;
 }
+.contacts:hover
+{
+  animation-play-state: paused;
+}
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
 }
 .picture img{
@@ -197,6 +202,7 @@ a{
   border-radius: 50%;
   border:10px solid var(--yukon);
   margin-left: 50px;
+  box-shadow: 10px 10px solid #24282b;
 }
 .introduction{
   position: relative;
@@ -270,24 +276,28 @@ img{
 .top{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 .navbar{
   color:#ffdac7;
+  list-style: none;
   text-decoration: #ffdac7;
   display:flex;
-  justify-content: space-around;
 
+}
+.navbar a{
+  margin-right: 15px;
 }
 .details{
   display:flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding:50px;
-  margin: 20px;
+  padding:30px;
+  margin:0px 20px;
   position: relative;
   flex-wrap: wrap;
+
 }
 .skills{
   background-color: #fa9500;
@@ -308,30 +318,94 @@ img{
   flex-wrap: wrap;
   animation: bounce 2s infinite ease-in-out;
 }
-.stars img{
+.star1 img{
   size:20px;
   width:50px;
-  animation: roll 2s infinite ease-in-out;
+  animation: roll1 1s infinite ease-in-out;
 }
-@keyframes roll {
+.star2 img{
+  size:20px;
+  width:50px;
+  padding-top:300px;
+  animation:roll2 1s infinite ease-in-out;
+}
+.stars{
+  display: flex;
+  flex-direction: column;
+
+
+}
+@keyframes roll1 {
   0% {
-    transform: translateX(100%);
-    transform: translateY(50%)
+    transform: translate(0,0);
+
   }
   50% {
-    transform: translateX(-100%);
+    transform: translate(-30px,30px);
+
   }
   100%{
-    transform: translateX(100%);
+    transform: translateX(0,0);
+
+  }
+}
+@keyframes roll2 {
+  0% {
+    transform: translate(0,0);
+
+  }
+  50% {
+    transform: translate(-30px,-30px);
+
+  }
+  100%{
+    transform: translateX(0,0);
+
+  }
+}
+.yarn img{
+  width:250px;
+  height:250px;
+  animation: rotateam 5s linear infinite;
+}
+@keyframes rotateam {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(1148px);
   }
 }
 
 .Footer{
-  background: #babd8e;
+   background: #babd8e;
 }
 .footer{
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width:100%;
   min-height:100px;
+  text-align: center;
+  flex-direction: column;
 
+}
+.footer li{
+  display: flex;
+  flex-direction: row;
+}
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .footer h2 {
+      font-size: 20px;
+  }
 }
