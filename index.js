@@ -1,22 +1,24 @@
-/*import { GSAPInfoBar } from "https://codepen.io/GreenSock/pen/vYqpyLg.js"
-new GSAPInfoBar({ link: "https://gsap.com/docs/v3/Plugins/ScrollTrigger/"});
-gsap.registerPlugin(ScrollTrigger);
-let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".hi",
-      start: "top bottom",
-      end: "bottom top",
-      scrub: true,
-      markers: true,
-      id: "scrub"
-    } 
-  })
-  tl.to(".hi", {
-    duration: 2,
-    x: 1000,
-    rotation: 360,
-  })
-  .to(".hi", {
-    duration: 2
-  });*/
+const togglebutton=document.getElementById("toggle");
+const targets = document.querySelectorAll(".block,.links, body");
+togglebutton.addEventListener("click",()=>{
+  const isDark = !document.body.classList.contains("darkmode");
+
+  targets.forEach(el => {
+    el.classList.toggle("darkmode", isDark);
+  });
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  const isDark = savedTheme === "dark";
+
+  if (isDark) {
+    document.querySelectorAll(".block,.links, body").forEach(el => {
+      el.classList.add("darkmode");
+    });
+  }
+});
+
   
