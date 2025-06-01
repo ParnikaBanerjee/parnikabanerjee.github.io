@@ -321,15 +321,15 @@ i{
   color:var(--tuft);
 }
 .navbar{
-  color:#ffdac7;
+  color:var(--tuft);
   list-style: none;
-  text-decoration: #ffdac7;
   display:flex;
   margin-right: 20px;
 
 }
 .navbar a{
   margin-right: 15px;
+  text-decoration: none;
 }
 .details{
   display:flex;
