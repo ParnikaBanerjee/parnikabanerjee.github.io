@@ -20,9 +20,13 @@
 #toggle{
   display: flex;
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 50%;
+  border:2px solid var(--lightblack);
+  margin-top:20px;
+  text-align: center;
   box-shadow: 2px 2px;
-  border:white 2px;
+  width: 40px;
+  height:40px;
 }
 #toggle:hover {
   background: rgba(0, 0, 0, 0.1);
@@ -509,7 +513,8 @@ i{
   border:2px solid var(--lightblack);
 }
 .project-img{
-  max-height:150px;
+  max-height:200px;
+  max-width: 400px;
 }
 
 .top-bar {
@@ -594,7 +599,6 @@ i{
   color: var(--tuft);
 }
 .project-section{
-  margin-top: 0px;;
   margin-bottom: 70px;
 }
 .character {
@@ -633,4 +637,38 @@ i{
     left: 90%;
     opacity: 0;
   }
+}
+#portfolio{
+  color:var(--tuft);
+  text-align: center;
+  margin:0px 50px;
+}
+.assetframe{
+  display: flex;
+  flex-direction: row;
+}
+.assetframe img{
+  display:flex;
+  flex-direction: row;
+  background: var(--yukon);
+  width:400px;
+  border: 2px solid var(--lightblack);
+  border-radius: 10px;
+  box-shadow: 15px 30px var(--lightblack);
+  color:var(--tuft);
+  margin-right:50px;
+  max-width:400px;
+  max-height:fit-content;
+  margin: 20px;
+  position: relative;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+header button{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+header button i{
+  scale:2em;
 }
