@@ -90,6 +90,7 @@ header{
     display:flex;
     padding: 0px;
 }*/
+
 .marquee-container span
 {
   display: inline-block;
@@ -646,6 +647,8 @@ i{
 .assetframe{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .assetframe img{
   display:flex;
